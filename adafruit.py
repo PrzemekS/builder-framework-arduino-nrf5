@@ -31,7 +31,7 @@ platform = env.PioPlatform()
 board = env.BoardConfig()
 variant = board.get("build.variant")
 
-is_xiao_board = board.id in ("xiaoblesense_adafruit", "xiaoble_adafruit", "xiaoble_adafruit_s340")
+is_xiao_board = board.id in ("xiaoblesense_adafruit", "xiaoble_adafruit", "xiaoblesense_adafruit_s340")
 framework_pkg = "framework-arduinoadafruitnrf52-seeed" if is_xiao_board else "framework-arduinoadafruitnrf52"
 FRAMEWORK_DIR = platform.get_package_dir(framework_pkg)
 assert isdir(FRAMEWORK_DIR)
